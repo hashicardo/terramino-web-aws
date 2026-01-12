@@ -7,8 +7,3 @@ output "bucket_name" {
   description = "Name of the S3 bucket"
   value       = aws_s3_bucket.website.id
 }
-
-output "region" {
-  description = "AWS region where the bucket is deployed"
-  value       = var.aws_region
-}

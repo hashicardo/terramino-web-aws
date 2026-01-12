@@ -3,13 +3,12 @@ terraform {
     aws = {
       source  = "hashicorp/aws"
       version = "~> 6.0"
-      configuration_aliases = [ aws.ue1, aws.ue2, aws.ew1, aws.ew2, aws.uw1]
+    }
+    random = {
+      source  = "hashicorp/random"
+      version = "~> 3.0"
     }
   }
-}
-
-provider "aws" {
-  region = var.aws_region
 }
 
 data "aws_region" "current" {}
